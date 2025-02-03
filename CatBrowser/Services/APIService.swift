@@ -9,19 +9,22 @@ import Foundation
 
 class APIService {
     static let shared = APIService()
-    private let baseURL = "https://api.thecatapi.com/v1/images/search?limit=10&page="
-    
+
     func fetchCats(page: Int, completion: @escaping (Result<[Cat], Error>) -> Void) {
-        guard let url = URL(string: "\(baseURL)\(page)") else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        let urlString = "\(AppConstants.baseURL)\(AppConstants.imageSearchEndpoint)?limit=10&has_breeds=1&page=\(page)"
+        guard let url = URL(string: urlString) else { return }
+
+        var request = URLRequest(url: url)
+        request.addValue(AppConstants.apiKey, forHTTPHeaderField: "x-api-key")
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 DispatchQueue.main.async {
                     completion(.failure(error))
                 }
                 return
             }
-            
+
             guard let data = data else { return }
             do {
                 let cats = try JSONDecoder().decode([Cat].self, from: data)

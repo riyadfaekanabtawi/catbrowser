@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct Cat: Identifiable, Codable {
+struct Cat: Identifiable, Codable, Equatable {
     let id: String
     let url: String
     let breeds: [Breed]?
+
+    static func == (lhs: Cat, rhs: Cat) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

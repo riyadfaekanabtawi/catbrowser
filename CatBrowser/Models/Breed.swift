@@ -7,9 +7,17 @@
 
 import Foundation
 
-struct Breed: Codable {
+struct Breed: Codable, Equatable {
+    let id: String
     let name: String
+    let weight: Weight
     let temperament: String
     let origin: String
     let life_span: String
+    let wikipedia_url: String?
+}
+
+struct Weight: Codable, Equatable {
+    let imperial: String
+    let metric: String
 }
