@@ -12,17 +12,41 @@ import XCTest
 
 class CatViewModelTests: XCTestCase {
     
-    func testFetchCats() {
-        let expectation = XCTestExpectation(description: "Fetch cats")
-        let viewModel = CatViewModel()
-        
+    func testFetchCatsSuccess() {
+        let mockService = MockCatService()
+        mockService.mockCats = [
+            Cat(id: "1", url: "https://example.com/cat1.jpg", breeds: []),
+            Cat(id: "2", url: "https://example.com/cat2.jpg", breeds: [])
+        ]
+        let viewModel = CatViewModel(service: mockService)
+
         viewModel.fetchCats()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            XCTAssertFalse(viewModel.cats.isEmpty)
-            expectation.fulfill()
+
+        XCTAssertEqual(viewModel.cats.count, 2)
+        XCTAssertEqual(viewModel.cats.first?.id, "1")
+    }
+    
+    func testFetchCatsFailure() {
+        let mockService = MockCatService()
+        mockService.shouldFail = true
+        let viewModel = CatViewModel(service: mockService)
+
+        viewModel.fetchCats()
+
+        XCTAssertTrue(viewModel.cats.isEmpty)
+    }
+}
+
+
+class MockCatService: CatServiceProtocol {
+    var mockCats: [Cat] = []
+    var shouldFail: Bool = false
+
+    func fetchCats(page: Int, completion: @escaping (Result<[Cat], Error>) -> Void) {
+        if shouldFail {
+            completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Mock Error"])))
+        } else {
+            completion(.success(mockCats))
         }
-        
-        wait(for: [expectation], timeout: 5)
     }
 }

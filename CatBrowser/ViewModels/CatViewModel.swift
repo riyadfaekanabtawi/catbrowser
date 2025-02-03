@@ -8,22 +8,20 @@
 import Foundation
 import Combine
 
-import Combine
-import Foundation
-
 class CatViewModel: ObservableObject {
     
     @Published var cats: [Cat] = []
     @Published var searchText: String = ""
     @Published var selectedWikipediaURL: IdentifiableURL?
     
+    private var service: CatServiceProtocol
     private var allCats: [Cat] = []
     private var page = 1
     private var isLoading = false
     private var cancellables = Set<AnyCancellable>()
 
-    init() {
-      
+    init(service: CatServiceProtocol = APIService.shared) {
+        self.service = service
         $searchText
             .debounce(for: .milliseconds(300), scheduler: RunLoop.main)
             .sink { [weak self] _ in

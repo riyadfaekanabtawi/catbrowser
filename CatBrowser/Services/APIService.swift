@@ -7,7 +7,11 @@
 
 import Foundation
 
-class APIService {
+protocol CatServiceProtocol {
+    func fetchCats(page: Int, completion: @escaping (Result<[Cat], Error>) -> Void)
+}
+
+class APIService: CatServiceProtocol {
     static let shared = APIService()
 
     func fetchCats(page: Int, completion: @escaping (Result<[Cat], Error>) -> Void) {

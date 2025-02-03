@@ -21,6 +21,20 @@ final class CatBrowserUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func testNavigationToDetailPage() {
+        let app = XCUIApplication()
+        app.launch()
+
+        let firstRow = app.tables.cells["CatRow_1"]
+        XCTAssertTrue(firstRow.exists)
+        firstRow.tap()
+
+        let detailTitle = app.staticTexts["Cat Details"]
+        XCTAssertTrue(detailTitle.exists)
+    }
+
+    
 
     @MainActor
     func testExample() throws {
@@ -36,7 +50,7 @@ final class CatBrowserUITests: XCTestCase {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.
             measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
+                   XCUIApplication().launch()
             }
         }
     }

@@ -16,6 +16,7 @@ struct ContentView: View {
                 NavigationLink(destination: CatDetailView(cat: cat)
                     .transition(.asymmetric(insertion: .scale, removal: .opacity))) {
                     CatRowView(cat: cat)
+                            .accessibilityIdentifier("CatRow_\(cat.id)")
                 }
                 .onAppear {
                     if cat == viewModel.cats.last {
