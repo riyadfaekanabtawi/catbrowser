@@ -13,20 +13,17 @@ jobs:
     runs-on: macos-latest
 
     steps:
-
+    
     - name: Checkout Code
       uses: actions/checkout@v3
 
+    
     - name: Set up Xcode
-      uses: maxim-lobanov/setup-xcode@v2
+      uses: apple-actions/setup-xcode@v2
       with:
-        xcode-version: latest
+        xcode-version: latest 
 
-    - name: Install Dependencies
-      run: |
-        pod install --repo-update # If using CocoaPods
-        # swift package resolve # Uncomment if using SPM
-
+    
     - name: Build and Test
       run: |
         xcodebuild clean test \
