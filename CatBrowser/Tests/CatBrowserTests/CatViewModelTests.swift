@@ -14,15 +14,12 @@ class CatViewModelTests: XCTestCase {
     
     func testFetchCatsSuccess() {
         let mockService = MockCatService()
-        mockService.mockCats = [
-            Cat(id: "1", url: "https://example.com/cat1.jpg", breeds: []),
-            Cat(id: "2", url: "https://example.com/cat2.jpg", breeds: [])
-        ]
         let viewModel = CatViewModel(service: mockService)
 
         viewModel.fetchCats()
 
-        XCTAssertEqual(viewModel.cats.count, 2)
+        XCTAssertFalse(viewModel.cats.isEmpty, "Expected cats to be fetched, but got an empty array")
+        XCTAssertEqual(viewModel.cats.count, 2, "Expected 2 cats, but got \(viewModel.cats.count)")
         XCTAssertEqual(viewModel.cats.first?.id, "1")
     }
     
@@ -39,12 +36,15 @@ class CatViewModelTests: XCTestCase {
 
 
 class MockCatService: CatServiceProtocol {
-    var mockCats: [Cat] = []
+    var mockCats: [Cat] = [
+        Cat(id: "1", url: "https://example.com/cat1.jpg", breeds: []),
+        Cat(id: "2", url: "https://example.com/cat2.jpg", breeds: [])
+    ]
     var shouldFail: Bool = false
 
     func fetchCats(page: Int, completion: @escaping (Result<[Cat], Error>) -> Void) {
         if shouldFail {
-            completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Mock Error"])))
+            completion(.failure(NSError(domain: "Mock Error", code: -1, userInfo: nil)))
         } else {
             completion(.success(mockCats))
         }

@@ -26,13 +26,17 @@ final class CatBrowserUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        let firstRow = app.tables.cells["CatRow_1"]
-        XCTAssertTrue(firstRow.exists)
+   
+        let firstRow = app.tables.cells.element(boundBy: 0)
+        XCTAssertTrue(firstRow.waitForExistence(timeout: 5), "First cat row did not appear in time")
+        
         firstRow.tap()
 
+   
         let detailTitle = app.staticTexts["Cat Details"]
-        XCTAssertTrue(detailTitle.exists)
+        XCTAssertTrue(detailTitle.waitForExistence(timeout: 5), "Detail page did not load")
     }
+
 
     
 
