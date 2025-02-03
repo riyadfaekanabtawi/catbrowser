@@ -13,7 +13,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(viewModel.cats) { cat in
-                NavigationLink(destination: CatDetailView(cat: cat)) {
+                NavigationLink(destination: CatDetailView(cat: cat)
+                    .transition(.asymmetric(insertion: .scale, removal: .opacity))) {
                     CatRowView(cat: cat)
                 }
                 .onAppear {
@@ -23,10 +24,6 @@ struct ContentView: View {
                 }
             }
             .searchable(text: $viewModel.searchText, prompt: "Search by breed")
-            .onChange(of: viewModel.searchText) {
-                viewModel.cats = viewModel.filterCats()
-            }
-
             .navigationTitle("Cat Browser")
             .onAppear {
                 viewModel.fetchCats()
@@ -34,8 +31,6 @@ struct ContentView: View {
         }
     }
 }
-
-
 
 #Preview {
     ContentView()

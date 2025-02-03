@@ -8,34 +8,54 @@
 import Foundation
 import SwiftUI
 
-import SwiftUI
-
 struct CatDetailView: View {
     let cat: Cat
-    @StateObject private var viewModel = CatViewModel() // Local ViewModel for managing browser
+    @StateObject private var viewModel = CatViewModel()
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
-                AsyncImage(url: URL(string: cat.url)) { image in
-                    image.resizable().scaledToFit()
-                } placeholder: {
-                    ProgressView()
+            VStack(alignment: .leading, spacing: 20) {
+          
+                if let url = URL(string: cat.url) {
+                    CachedAsyncImage(url: url)
+                        .frame(height: 300)
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .shadow(radius: 10)
                 }
-                .frame(height: 300)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
 
+                
                 if let breed = cat.breeds?.first {
                     Text(breed.name)
-                        .font(.title)
-                        .bold()
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
 
-                    Text("🐾 Weight: \(breed.weight.imperial) lbs (\(breed.weight.metric) kg)")
-                    Text("🌍 Origin: \(breed.origin)")
-                    Text("❤️ Life Span: \(breed.life_span) years")
-                    Text("🎭 Temperament: \(breed.temperament)")
+                    HStack {
+                        Text("🐾 Weight:")
+                            .fontWeight(.semibold)
+                        Text("\(breed.weight.imperial) lbs (\(breed.weight.metric) kg)")
+                    }
 
-                    if let wikipediaURL = breed.wikipedia_url {
+                    HStack {
+                        Text("🌍 Origin:")
+                            .fontWeight(.semibold)
+                        Text(breed.origin)
+                    }
+
+                    HStack {
+                        Text("❤️ Life Span:")
+                            .fontWeight(.semibold)
+                        Text("\(breed.life_span) years")
+                    }
+
+                    VStack(alignment: .leading) {
+                        Text("🎭 Temperament:")
+                            .fontWeight(.semibold)
+                        Text(breed.temperament)
+                            .lineLimit(nil)
+                            .multilineTextAlignment(.leading)
+                    }
+
+                    if breed.wikipedia_url != nil {
                         Button(action: {
                             viewModel.openWikipedia(for: cat)
                         }) {
@@ -46,13 +66,14 @@ struct CatDetailView: View {
                     }
                 } else {
                     Text("No breed information available.")
+                        .foregroundColor(.gray)
                 }
             }
             .padding()
         }
         .navigationTitle("Cat Details")
         .sheet(item: $viewModel.selectedWikipediaURL) { identifiableURL in
-            SafariView(url: identifiableURL.url) // Extract the raw URL from IdentifiableURL
+            SafariView(url: identifiableURL.url)
         }
     }
 }
