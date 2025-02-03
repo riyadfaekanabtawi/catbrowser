@@ -29,20 +29,42 @@
 		603B2ED72D513ADD002A53F8 /* CatBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		606134052D513DDD0092E333 /* Exceptions for "CatBrowser" folder in "CatBrowser" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/CatBrowserTests/CatBrowserTests.swift,
+				Tests/CatBrowserUITests/CatBrowserUITests.swift,
+				Tests/CatBrowserUITests/CatBrowserUITestsLaunchTests.swift,
+			);
+			target = 603B2EBC2D513ADB002A53F8 /* CatBrowser */;
+		};
+		606134062D513DDD0092E333 /* Exceptions for "CatBrowser" folder in "CatBrowserTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/CatBrowserTests/CatBrowserTests.swift,
+			);
+			target = 603B2ECC2D513ADD002A53F8 /* CatBrowserTests */;
+		};
+		6061340C2D513DE00092E333 /* Exceptions for "CatBrowser" folder in "CatBrowserUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/CatBrowserUITests/CatBrowserUITests.swift,
+				Tests/CatBrowserUITests/CatBrowserUITestsLaunchTests.swift,
+			);
+			target = 603B2ED62D513ADD002A53F8 /* CatBrowserUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		603B2EBF2D513ADC002A53F8 /* CatBrowser */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				606134052D513DDD0092E333 /* Exceptions for "CatBrowser" folder in "CatBrowser" target */,
+				606134062D513DDD0092E333 /* Exceptions for "CatBrowser" folder in "CatBrowserTests" target */,
+				6061340C2D513DE00092E333 /* Exceptions for "CatBrowser" folder in "CatBrowserUITests" target */,
+			);
 			path = CatBrowser;
-			sourceTree = "<group>";
-		};
-		603B2ED02D513ADD002A53F8 /* CatBrowserTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CatBrowserTests;
-			sourceTree = "<group>";
-		};
-		603B2EDA2D513ADD002A53F8 /* CatBrowserUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CatBrowserUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -76,8 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				603B2EBF2D513ADC002A53F8 /* CatBrowser */,
-				603B2ED02D513ADD002A53F8 /* CatBrowserTests */,
-				603B2EDA2D513ADD002A53F8 /* CatBrowserUITests */,
 				603B2EBE2D513ADB002A53F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,9 +150,6 @@
 			dependencies = (
 				603B2ECF2D513ADD002A53F8 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				603B2ED02D513ADD002A53F8 /* CatBrowserTests */,
-			);
 			name = CatBrowserTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +169,6 @@
 			);
 			dependencies = (
 				603B2ED92D513ADD002A53F8 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				603B2EDA2D513ADD002A53F8 /* CatBrowserUITests */,
 			);
 			name = CatBrowserUITests;
 			packageProductDependencies = (
