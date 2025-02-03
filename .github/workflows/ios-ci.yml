@@ -13,15 +13,14 @@ jobs:
     runs-on: macos-latest
 
     steps:
-
+   
     - name: Checkout Code
       uses: actions/checkout@v3
-
 
     - name: Build and Test
       run: |
         xcodebuild clean test \
-          -workspace CatBrowser.xcodeproj \
+          -project CatBrowser.xcodeproj \  # Use .xcodeproj instead of .xcworkspace
           -scheme CatBrowser \
           -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
           CODE_SIGNING_ALLOWED=NO
