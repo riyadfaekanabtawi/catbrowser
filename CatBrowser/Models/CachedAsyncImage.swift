@@ -17,7 +17,7 @@ struct CachedAsyncImage: View {
             if let uiImage = uiImage {
                 Image(uiImage: uiImage)
                     .resizable()
-                    .scaledToFill()
+                    .scaledToFit()
             } else {
                 ProgressView()
                     .onAppear {
