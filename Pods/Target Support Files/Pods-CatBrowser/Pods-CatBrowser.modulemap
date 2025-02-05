@@ -1,0 +1,6 @@
+framework module Pods_CatBrowser {
+  umbrella header "Pods-CatBrowser-umbrella.h"
+
+  export *
+  module * { export * }
+}

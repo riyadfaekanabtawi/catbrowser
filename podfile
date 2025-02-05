@@ -1,0 +1,34 @@
+platform :ios, '13.0'
+
+target 'CatBrowser' do
+  use_frameworks!
+
+  # Pods for CatBrowser
+  pod 'Alamofire', '~> 5.7'
+  pod 'SDWebImageSwiftUI', '~> 2.0'
+
+  target 'CatBrowserTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'Alamofire', '~> 5.7'
+    pod 'SDWebImage'
+  end
+
+  target 'CatBrowserUITests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'Alamofire', '~> 5.7'
+    pod 'SDWebImage'
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      config.build_settings['SKIP_INSTALL'] = 'YES' if target.name.include?('Tests')
+      config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO' if target.name.include?('Tests')
+    end
+  end
+end
+

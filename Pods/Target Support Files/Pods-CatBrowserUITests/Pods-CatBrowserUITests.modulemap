@@ -1,0 +1,6 @@
+framework module Pods_CatBrowserUITests {
+  umbrella header "Pods-CatBrowserUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
