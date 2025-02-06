@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08C51E7BF7736F3A5F2C4DF2 /* Pods_CatBrowserUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC12356F97178D2B9185BD5B /* Pods_CatBrowserUITests.framework */; };
-		43BB04BB036F75DAD022051D /* Pods_CatBrowserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF1FFA908A33DD9757EEA14 /* Pods_CatBrowserTests.framework */; };
+		177047EA010EEDB03A2BD57C /* Pods_CatBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB4AA970F9D9521068BE063 /* Pods_CatBrowser.framework */; };
+		23F9E3144F14464D088E8AC4 /* Pods_CatBrowserUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1890F257D6F246A4BEF20C94 /* Pods_CatBrowserUITests.framework */; };
 		6061341D2D51401D0092E333 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6061341C2D51401D0092E333 /* XCTest.framework */; platformFilter = ios; };
 		6061341E2D5140220092E333 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6061341C2D51401D0092E333 /* XCTest.framework */; platformFilter = ios; };
 		606134202D5140B70092E333 /* XCTest.framework in Sources */ = {isa = PBXBuildFile; fileRef = 6061341C2D51401D0092E333 /* XCTest.framework */; platformFilter = ios; };
 		606134232D5140DD0092E333 /* XCTest.framework in Sources */ = {isa = PBXBuildFile; fileRef = 6061341C2D51401D0092E333 /* XCTest.framework */; platformFilter = ios; };
 		60914C5A2D5409AE0055419C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60914C592D5409AE0055419C /* Alamofire.framework */; };
 		60914C5E2D5409B20055419C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60914C5D2D5409B20055419C /* Alamofire.framework */; };
-		B997104577677D90D5FAA43F /* Pods_CatBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57CE943D87B4AEC6DC871F86 /* Pods_CatBrowser.framework */; };
+		CC9E252942088DAA3ACC7CBB /* Pods_CatBrowserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E14DDC9BF92DB21C693CE5 /* Pods_CatBrowserTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +59,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0DF68B781959F650E15EA8E3 /* Pods-CatBrowserUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBrowserUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatBrowserUITests/Pods-CatBrowserUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		57CE943D87B4AEC6DC871F86 /* Pods_CatBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DF1FFA908A33DD9757EEA14 /* Pods_CatBrowserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatBrowserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1890F257D6F246A4BEF20C94 /* Pods_CatBrowserUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatBrowserUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		254C1744C791A99C9A75DBA5 /* Pods-CatBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBrowser.debug.xcconfig"; path = "Target Support Files/Pods-CatBrowser/Pods-CatBrowser.debug.xcconfig"; sourceTree = "<group>"; };
+		2EB4AA970F9D9521068BE063 /* Pods_CatBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		396EC3DBD97182B9A622386E /* Pods-CatBrowserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBrowserTests.release.xcconfig"; path = "Target Support Files/Pods-CatBrowserTests/Pods-CatBrowserTests.release.xcconfig"; sourceTree = "<group>"; };
+		3A950958CF10A2C89F84C5CF /* Pods-CatBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBrowser.release.xcconfig"; path = "Target Support Files/Pods-CatBrowser/Pods-CatBrowser.release.xcconfig"; sourceTree = "<group>"; };
+		3B1D841AE2E026C2E5B2126F /* Pods-CatBrowserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBrowserTests.debug.xcconfig"; path = "Target Support Files/Pods-CatBrowserTests/Pods-CatBrowserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		603B2EBD2D513ADB002A53F8 /* CatBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		603B2ECD2D513ADD002A53F8 /* CatBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		603B2ED72D513ADD002A53F8 /* CatBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,12 +74,9 @@
 		60914BBB2D5407500055419C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60914C592D5409AE0055419C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60914C5D2D5409B20055419C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		778CD62BB962932989EA930E /* Pods-CatBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBrowser.release.xcconfig"; path = "Target Support Files/Pods-CatBrowser/Pods-CatBrowser.release.xcconfig"; sourceTree = "<group>"; };
-		8738C33FA4BD271B1A20C70A /* Pods-CatBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBrowser.debug.xcconfig"; path = "Target Support Files/Pods-CatBrowser/Pods-CatBrowser.debug.xcconfig"; sourceTree = "<group>"; };
-		B062DEF8F3BA03F76862A412 /* Pods-CatBrowserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBrowserTests.debug.xcconfig"; path = "Target Support Files/Pods-CatBrowserTests/Pods-CatBrowserTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BC12356F97178D2B9185BD5B /* Pods_CatBrowserUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatBrowserUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3CE2FFA1C271456F73BC742 /* Pods-CatBrowserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBrowserTests.release.xcconfig"; path = "Target Support Files/Pods-CatBrowserTests/Pods-CatBrowserTests.release.xcconfig"; sourceTree = "<group>"; };
-		EBA819D9544CDB4F31EEE240 /* Pods-CatBrowserUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBrowserUITests.release.xcconfig"; path = "Target Support Files/Pods-CatBrowserUITests/Pods-CatBrowserUITests.release.xcconfig"; sourceTree = "<group>"; };
+		83E14DDC9BF92DB21C693CE5 /* Pods_CatBrowserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatBrowserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A796C0BC682995F742764AE4 /* Pods-CatBrowserUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBrowserUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatBrowserUITests/Pods-CatBrowserUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AFE900ED48AF6034D826101C /* Pods-CatBrowserUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatBrowserUITests.release.xcconfig"; path = "Target Support Files/Pods-CatBrowserUITests/Pods-CatBrowserUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -124,7 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B997104577677D90D5FAA43F /* Pods_CatBrowser.framework in Frameworks */,
+				177047EA010EEDB03A2BD57C /* Pods_CatBrowser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +134,7 @@
 			files = (
 				6061341D2D51401D0092E333 /* XCTest.framework in Frameworks */,
 				60914C5A2D5409AE0055419C /* Alamofire.framework in Frameworks */,
-				43BB04BB036F75DAD022051D /* Pods_CatBrowserTests.framework in Frameworks */,
+				CC9E252942088DAA3ACC7CBB /* Pods_CatBrowserTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +144,7 @@
 			files = (
 				6061341E2D5140220092E333 /* XCTest.framework in Frameworks */,
 				60914C5E2D5409B20055419C /* Alamofire.framework in Frameworks */,
-				08C51E7BF7736F3A5F2C4DF2 /* Pods_CatBrowserUITests.framework in Frameworks */,
+				23F9E3144F14464D088E8AC4 /* Pods_CatBrowserUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,12 +154,12 @@
 		363345C88F36AD37E0E17BC5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8738C33FA4BD271B1A20C70A /* Pods-CatBrowser.debug.xcconfig */,
-				778CD62BB962932989EA930E /* Pods-CatBrowser.release.xcconfig */,
-				B062DEF8F3BA03F76862A412 /* Pods-CatBrowserTests.debug.xcconfig */,
-				E3CE2FFA1C271456F73BC742 /* Pods-CatBrowserTests.release.xcconfig */,
-				0DF68B781959F650E15EA8E3 /* Pods-CatBrowserUITests.debug.xcconfig */,
-				EBA819D9544CDB4F31EEE240 /* Pods-CatBrowserUITests.release.xcconfig */,
+				254C1744C791A99C9A75DBA5 /* Pods-CatBrowser.debug.xcconfig */,
+				3A950958CF10A2C89F84C5CF /* Pods-CatBrowser.release.xcconfig */,
+				3B1D841AE2E026C2E5B2126F /* Pods-CatBrowserTests.debug.xcconfig */,
+				396EC3DBD97182B9A622386E /* Pods-CatBrowserTests.release.xcconfig */,
+				A796C0BC682995F742764AE4 /* Pods-CatBrowserUITests.debug.xcconfig */,
+				AFE900ED48AF6034D826101C /* Pods-CatBrowserUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -193,9 +193,9 @@
 				60914BB92D5407420055419C /* Alamofire.framework */,
 				60914BB72D54068B0055419C /* Alamofire.framework */,
 				6061341C2D51401D0092E333 /* XCTest.framework */,
-				57CE943D87B4AEC6DC871F86 /* Pods_CatBrowser.framework */,
-				5DF1FFA908A33DD9757EEA14 /* Pods_CatBrowserTests.framework */,
-				BC12356F97178D2B9185BD5B /* Pods_CatBrowserUITests.framework */,
+				2EB4AA970F9D9521068BE063 /* Pods_CatBrowser.framework */,
+				83E14DDC9BF92DB21C693CE5 /* Pods_CatBrowserTests.framework */,
+				1890F257D6F246A4BEF20C94 /* Pods_CatBrowserUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,11 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 603B2EE12D513ADD002A53F8 /* Build configuration list for PBXNativeTarget "CatBrowser" */;
 			buildPhases = (
-				0B7222CEF28F2B2308208A90 /* [CP] Check Pods Manifest.lock */,
+				A45455FB65D55A9C81CC05B8 /* [CP] Check Pods Manifest.lock */,
 				603B2EB92D513ADB002A53F8 /* Sources */,
 				603B2EBA2D513ADB002A53F8 /* Frameworks */,
 				603B2EBB2D513ADB002A53F8 /* Resources */,
-				F607BC9934D61164FBF11D1F /* [CP] Embed Pods Frameworks */,
+				72AF571F0CF6B2AD15E414C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,12 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 603B2EE42D513ADD002A53F8 /* Build configuration list for PBXNativeTarget "CatBrowserTests" */;
 			buildPhases = (
-				519C30ACF3A5E59ABF6ABF79 /* [CP] Check Pods Manifest.lock */,
+				6DE770F93A81F9181B6E0237 /* [CP] Check Pods Manifest.lock */,
 				603B2EC92D513ADD002A53F8 /* Sources */,
 				603B2ECA2D513ADD002A53F8 /* Frameworks */,
 				603B2ECB2D513ADD002A53F8 /* Resources */,
 				60914C5C2D5409AE0055419C /* Embed Frameworks */,
-				88B173472397723DDE85EAB2 /* [CP] Embed Pods Frameworks */,
+				91ECFA10B7D79081349ABA9A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,12 +250,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 603B2EE72D513ADD002A53F8 /* Build configuration list for PBXNativeTarget "CatBrowserUITests" */;
 			buildPhases = (
-				EE5FA24543F9C0B17BBC3330 /* [CP] Check Pods Manifest.lock */,
+				8180DB5C838AA73DEC5AF4D1 /* [CP] Check Pods Manifest.lock */,
 				603B2ED32D513ADD002A53F8 /* Sources */,
 				603B2ED42D513ADD002A53F8 /* Frameworks */,
 				603B2ED52D513ADD002A53F8 /* Resources */,
 				60914C602D5409B20055419C /* Embed Frameworks */,
-				CCFCD79922EBB8F7E68BAFBA /* [CP] Embed Pods Frameworks */,
+				2ABBB4E7C54EA470DD247202 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -336,29 +336,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B7222CEF28F2B2308208A90 /* [CP] Check Pods Manifest.lock */ = {
+		2ABBB4E7C54EA470DD247202 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatBrowserUITests/Pods-CatBrowserUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CatBrowser-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-CatBrowserUITests/Pods-CatBrowserUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatBrowserUITests/Pods-CatBrowserUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		519C30ACF3A5E59ABF6ABF79 /* [CP] Check Pods Manifest.lock */ = {
+		6DE770F93A81F9181B6E0237 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,41 +375,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		88B173472397723DDE85EAB2 /* [CP] Embed Pods Frameworks */ = {
+		72AF571F0CF6B2AD15E414C3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CatBrowserTests/Pods-CatBrowserTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CatBrowser/Pods-CatBrowser-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CatBrowserTests/Pods-CatBrowserTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CatBrowser/Pods-CatBrowser-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatBrowserTests/Pods-CatBrowserTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatBrowser/Pods-CatBrowser-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CCFCD79922EBB8F7E68BAFBA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CatBrowserUITests/Pods-CatBrowserUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CatBrowserUITests/Pods-CatBrowserUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatBrowserUITests/Pods-CatBrowserUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE5FA24543F9C0B17BBC3330 /* [CP] Check Pods Manifest.lock */ = {
+		8180DB5C838AA73DEC5AF4D1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -436,21 +414,43 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F607BC9934D61164FBF11D1F /* [CP] Embed Pods Frameworks */ = {
+		91ECFA10B7D79081349ABA9A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CatBrowser/Pods-CatBrowser-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CatBrowserTests/Pods-CatBrowserTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CatBrowser/Pods-CatBrowser-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CatBrowserTests/Pods-CatBrowserTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatBrowser/Pods-CatBrowser-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatBrowserTests/Pods-CatBrowserTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A45455FB65D55A9C81CC05B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatBrowser-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -616,7 +616,7 @@
 		};
 		603B2EE22D513ADD002A53F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8738C33FA4BD271B1A20C70A /* Pods-CatBrowser.debug.xcconfig */;
+			baseConfigurationReference = 254C1744C791A99C9A75DBA5 /* Pods-CatBrowser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -627,6 +627,10 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_ARCHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Pods",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -648,7 +652,7 @@
 		};
 		603B2EE32D513ADD002A53F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 778CD62BB962932989EA930E /* Pods-CatBrowser.release.xcconfig */;
+			baseConfigurationReference = 3A950958CF10A2C89F84C5CF /* Pods-CatBrowser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -680,12 +684,14 @@
 		};
 		603B2EE52D513ADD002A53F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B062DEF8F3BA03F76862A412 /* Pods-CatBrowserTests.debug.xcconfig */;
+			baseConfigurationReference = 3B1D841AE2E026C2E5B2126F /* Pods-CatBrowserTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BCSX7QHVMH;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
@@ -700,12 +706,14 @@
 		};
 		603B2EE62D513ADD002A53F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3CE2FFA1C271456F73BC742 /* Pods-CatBrowserTests.release.xcconfig */;
+			baseConfigurationReference = 396EC3DBD97182B9A622386E /* Pods-CatBrowserTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BCSX7QHVMH;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
@@ -720,11 +728,13 @@
 		};
 		603B2EE82D513ADD002A53F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DF68B781959F650E15EA8E3 /* Pods-CatBrowserUITests.debug.xcconfig */;
+			baseConfigurationReference = A796C0BC682995F742764AE4 /* Pods-CatBrowserUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BCSX7QHVMH;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				MARKETING_VERSION = 1.0;
@@ -739,11 +749,13 @@
 		};
 		603B2EE92D513ADD002A53F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBA819D9544CDB4F31EEE240 /* Pods-CatBrowserUITests.release.xcconfig */;
+			baseConfigurationReference = AFE900ED48AF6034D826101C /* Pods-CatBrowserUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BCSX7QHVMH;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				MARKETING_VERSION = 1.0;

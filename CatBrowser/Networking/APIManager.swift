@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class APIManager {
+class APIManager: APIManagerProtocol {
     static let shared = APIManager()
     private let baseURL = AppConstants.baseURL
 

@@ -6,8 +6,6 @@
 //
 
 import XCTest
-import Alamofire
-import SDWebImageSwiftUI
 
 final class CatBrowserUITestsLaunchTests: XCTestCase {
 

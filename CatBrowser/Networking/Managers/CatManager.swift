@@ -6,21 +6,18 @@
 //
 
 import Foundation
+
 class CatManager {
-    private var apiManager: APIManager
+private var apiManager: APIManagerProtocol
 
-    init(apiManager: APIManager = .shared) {
-        self.apiManager = apiManager
-    }
+init(apiManager: APIManagerProtocol = APIManager.shared) {
+    self.apiManager = apiManager
+}
 
-    func getCats(page: Int, completion: @escaping (Result<[Cat], Error>) -> Void) {
-        apiManager.request(apiRequest: CatRequest.fetchCats(page: page)) { result in
-            switch result {
-            case .failure(let error):
-                completion(.failure(error))
-            case .success(let cats):
-                completion(.success(cats))
-            }
-        }
+func getCats(page: Int, completion: @escaping (Result<[Cat], Error>) -> Void) {
+    let request = CatRequest.fetchCats(page: page)
+    apiManager.request(apiRequest: request) { result in
+        completion(result)
     }
+}
 }
